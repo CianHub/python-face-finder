@@ -5,13 +5,13 @@ image_of_tenshin = face_recognition.load_image_file(
 tenshin_face_encoding = face_recognition.face_encodings(image_of_tenshin)[0]
 
 unknown_image = face_recognition.load_image_file(
-    './img/unknown/2.jpeg')
+    './img/unknown/7.jpeg')
 unknown_face_encoding = face_recognition.face_encodings(unknown_image)[0]
 
 results = face_recognition.compare_faces(
     [tenshin_face_encoding], unknown_face_encoding)
 
 if results[0]:
-    print('Its Tenshin')
+    print('It is Tenshin')
 else:
     print('It is not Tenshin')
